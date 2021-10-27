@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+{# the style section can be in the html page just below the html tag
+or be in separate file and then reference to the style in the html page
+in the link below we refer to our style sheet #}
+<head>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}" >
+    <script type="text/javascript" scr="{{ url_for('static',filename='script/script.js') }}">
+        alert("This page has been loaded")
+    </script>
+</head>
+<body>
+
+<h2>HTML Forms</h2>
+
+{# comment #}
+<form action="/submit" method="post">
+    <label for="Science">Science:</label><br>
+    <input type="text" id="science" name="science" value="0"><br><br>
+    <label for="Maths">Maths:</label><br>
+    <input type="text" id="maths" name="maths" value="0"><br><br>
+    <label for="C">C:</label><br>
+    <input type="text" id="c" name="c" value="0"><br><br>
+    <label for="datascience">Data Science:</label><br>
+    <input type="text" id="datascience" name="datascience" value="0"><br><br>
+    <input type="submit" value="Submit">
+
+    <p>If you click the "Submit" button, the form-data will be sent to a p</p>
+
+</form>
+
+</body>
+</html>
